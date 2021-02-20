@@ -5,6 +5,14 @@
 # raspberry
 Raspberry is a format for expressing JSX files as plain JSON. This makes it easier to programmatically generate and modify React & React Native code.
 
+## Why?
+The point of Raspberry to use some other form of system (GUI or command line) to generate actual React / RN code. 
+This is useful for create 'App Builder' type systems, or programmatically generating whitelabel versions of an app. 
+
+Raspberry differs from other JSON/XML formats as it is designed specifically for JSX. This includes state logic, hooks and conditional rendering.
+
+Because of this, Raspberry is provided a Node script, and is not designed to be run in the front end.
+
 ## How it looks
 ```
 example.raspberry.json
@@ -73,9 +81,11 @@ example.raspberry.json
 }
 ```
 
+As you can see, everything we would expect to find in JSX is modelled in JSON.
+
 ## What that makes
 ```
-example.tsx
+example.jsx
 
 import React from 'react';
 import {useState} from 'react';
@@ -99,3 +109,9 @@ export const Test = () => {
     )
 }
 ```
+
+## Converting
+It's up to you to generating the raspberry file. To convert it to JSX, simply run.
+`node ./raspberryToJSX.js path/to/input/file.raspberry.json path/to/output.jsx`
+
+Your file will be created, or overwritten if it already exists. 
