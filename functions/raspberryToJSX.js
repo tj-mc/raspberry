@@ -36,7 +36,6 @@ const classicFunctionRegex = /function/g
  */
 const createImportStatement = (name, from) => `import ${name} from '${from}'; `
 
-
 /**
  * Remove curly braces from a string
  * @param {string} string
@@ -93,7 +92,6 @@ const createConditionalRenderingMarkup = (booleanReturnExpression) => {
     }
 }
 
-
 /**
  * Create an element from the raspberry tree
  * @param element
@@ -139,12 +137,12 @@ const main = () => {
     }
 
     // Create body imports
-    rFile.bodyImports.forEach(bodyImport => {
+    rFile?.bodyImports.forEach(bodyImport => {
         jsxFile.imports.push(createImportStatement(bodyImport.name, bodyImport.from))
     })
 
     // Name of component
-    jsxFile.body += 'export const Test = () => {'
+    jsxFile.body += `export const Test = () => {`
 
     // Add body (logic and expressions)
     jsxFile.body += rFile.body;
@@ -156,7 +154,7 @@ const main = () => {
     jsxFile.body += recursiveFromRootElement.markup
     jsxFile.imports = [...jsxFile.imports, ...recursiveFromRootElement.import]
 
-    // End of JSX return
+    // End of JSX return & component
     jsxFile.body += ')}'
 
     // Assemble final string to write out
