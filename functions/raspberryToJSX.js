@@ -65,6 +65,36 @@ const createPropString = props => {
 }
 
 /**
+ * Return a 2 part conditional rendering statements
+ * Example output:
+ * [
+ *      '{x === true &&',
+ *      '}'
+ * ]
+ *
+ * For simplicity sake, this does not support a ternary expression,
+ * only the short circuit style. You can achieve equivalent behaviour
+ * using 2 short-circuit expressions.
+ *
+ * @param {string} booleanReturnExpression
+ * @returns {[string, string]}
+ */
+const createConditionalRenderingMarkup = (booleanReturnExpression) => {
+    if (booleanReturnExpression) {
+        return [
+            `{${booleanReturnExpression} &&`,
+            `}`
+        ]
+    } else {
+        return [
+            '',
+            ''
+        ]
+    }
+}
+
+
+/**
  * Create an element from the raspberry tree
  * @param element
  * @returns {{import: (*[]|[string]), markup: string}}
@@ -82,9 +112,15 @@ const createElement = (element) => {
     const elementName = removeCurlyBraces(element.import.name)
     const propString = createPropString(element.props)
 
+    const conditionalRenderingMarkupArray = createConditionalRenderingMarkup(element?.logic?.renderIf)
+
+    const childMarkupString = childElements?.map(child => child.markup)?.join('') || childString
+    const nonConditionalMarkup = `<${elementName} ${propString}>${childMarkupString}</${elementName}>`
+    const conditionalMarkup = `${conditionalRenderingMarkupArray[0]}${nonConditionalMarkup}${conditionalRenderingMarkupArray[1]}`
+
     return {
         import: childElementImports ? [...imports, ...childElementImports] : imports,
-        markup: `<${elementName} ${propString}>${childElements?.map(child => child.markup)?.join('') || childString}</${elementName}>`
+        markup: conditionalMarkup
     }
 }
 
@@ -116,9 +152,9 @@ const main = () => {
     // Start of JSX return
     jsxFile.body += 'return('
 
-    const rootElement = createElement(rFile.markup)
-    jsxFile.body += rootElement.markup
-    jsxFile.imports = [...jsxFile.imports, ...rootElement.import]
+    const recursiveFromRootElement = createElement(rFile.markup)
+    jsxFile.body += recursiveFromRootElement.markup
+    jsxFile.imports = [...jsxFile.imports, ...recursiveFromRootElement.import]
 
     // End of JSX return
     jsxFile.body += ')}'
