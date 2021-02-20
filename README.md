@@ -11,7 +11,7 @@ This is useful for create 'App Builder' type systems, or programmatically genera
 
 Raspberry differs from other JSON/XML formats as it is designed specifically for JSX. This includes state logic, hooks and conditional rendering.
 
-Because of this, Raspberry is provided a Node script, and is not designed to be run in the front end.
+Because of this, Raspberry is provided as a Node script, and is not designed to be run in the front end.
 
 ## How it looks
 ```
@@ -114,4 +114,11 @@ export const Test = () => {
 It's up to you to generating the raspberry file. To convert it to JSX, simply run.
 `node ./raspberryToJSX.js path/to/input/file.raspberry.json path/to/output.jsx`
 
-Your file will be created, or overwritten if it already exists. 
+Your file will be created, or overwritten if it already exists.
+
+## Performance
+`1000 lines = 86550 chars = 1.0780297ms = 0.00001245557ms /char`
+
+## Future Improvements
+- Optimise imports
+- Implement conditional renders
