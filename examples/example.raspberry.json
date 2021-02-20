@@ -15,7 +15,7 @@
       "from": "react"
     }
   ],
-  "body": "const x = true; const [textState, setTextState] = useState('React Native');",
+  "body": "const x = true; const [textState, setTextState] = useState('Hey bubby girl');",
   "markup": {
     "import": {
       "name": "{View}",
@@ -38,9 +38,10 @@
           "renderIf": "x === true"
         },
         "props": {
-          "onPress": "() => setTextState('React Native w/ JSXJSON')}"
+          "onPress": "() => setTextState('I love you sooo much!')"
         },
         "children": [
+
           {
             "import": {
               "name": "{Text}",
@@ -48,11 +49,992 @@
             },
             "props": {
               "style": {
-                "textAlign": "center"
+                "textAlign": "right",
+                "color": "red"
               },
               "numberOfLines": 1
             },
-            "stringChild": "Welcome to {textState}"
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
+          },
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "right",
+                "color": "red"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "{textState}"
           }
         ]
       }
