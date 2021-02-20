@@ -32,7 +32,7 @@ Because of this, Raspberry is provided as a Node script, and is not designed to 
       "from": "react"
     }
   ],
-  "body": "const x = true; const [textState, setTextState] = useState('Welcome to React Native');",
+  "body": "const x = true; const [textState, setTextState] = useState('This is React Native Code');",
   "markup": {
     "import": {
       "name": "{View}",
@@ -55,7 +55,7 @@ Because of this, Raspberry is provided as a Node script, and is not designed to 
           "renderIf": "x === true"
         },
         "props": {
-          "onPress": "() => setTextState('Rendered with Raspberry')"
+          "onPress": "() => setTextState('Generated with Raspberry')"
         },
         "children": [
           {

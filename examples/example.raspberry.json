@@ -15,7 +15,7 @@
       "from": "react"
     }
   ],
-  "body": "const x = true; const [textState, setTextState] = useState('Hey bubby girl');",
+  "body": "const x = true; const [textState, setTextState] = useState('This is React Native Code');",
   "markup": {
     "import": {
       "name": "{View}",
@@ -38,7 +38,7 @@
           "renderIf": "x === true"
         },
         "props": {
-          "onPress": "() => setTextState('I love you sooo much!')"
+          "onPress": "() => setTextState('Generate with Raspberry')"
         },
         "children": [
           {
