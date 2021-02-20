@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "fileName": "example",
+    "export": {
+      "name": "{Example}"
+    }
+  },
+  "bodyImports": [
+    {
+      "name": "React",
+      "from": "react"
+    },
+    {
+      "name": "{useState}",
+      "from": "react"
+    }
+  ],
+  "body": "const x = true; const [textState, setTextState] = useState('React Native');",
+  "markup": {
+    "import": {
+      "name": "{View}",
+      "from": "react-native"
+    },
+    "props": {
+      "style": {
+        "flexDirection": "row",
+        "display": "flex",
+        "alignItems": "center"
+      }
+    },
+    "children": [
+      {
+        "import": {
+          "name": "{TouchableOpacity}",
+          "from": "react-native"
+        },
+        "logic": {
+          "renderIf": "x === true"
+        },
+        "props": {
+          "onPress": "() => setTextState('React Native w/ JSXJSON')}"
+        },
+        "children": [
+          {
+            "import": {
+              "name": "{Text}",
+              "from": "react-native"
+            },
+            "props": {
+              "style": {
+                "textAlign": "center"
+              },
+              "numberOfLines": 1
+            },
+            "stringChild": "Welcome to {textState}"
+          }
+        ]
+      }
+    ]
+  }
+}
