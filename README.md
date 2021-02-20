@@ -14,9 +14,7 @@ Raspberry differs from other JSON/XML formats as it is designed specifically for
 Because of this, Raspberry is provided as a Node script, and is not designed to be run in the front end.
 
 ## How it looks
-```
-example.raspberry.json
-
+```json
 {
   "meta": {
     "fileName": "example",
@@ -84,9 +82,8 @@ example.raspberry.json
 As you can see, everything we would expect to find in JSX is modelled in JSON.
 
 ## What that makes
-```
-example.jsx
-
+After prettifying, this is the output:
+```jsx
 import React from 'react';
 import {useState} from 'react';
 import {View} from 'react-native';
@@ -102,17 +99,21 @@ export const Test = () => {
                 onPress={() => setTextState('Rendered with Raspberry')}>
                 <Text
                     style={{"textAlign": "right", "color": "red"}}
-                    numberOfLines={1}>
+                    numberOfLines={1}
+                >
                     {textState}
                 </Text>
-            </TouchableOpacity></View>
+            </TouchableOpacity>
+        </View>
     )
 }
 ```
 
 ## Converting
 It's up to you to generating the raspberry file. To convert it to JSX, simply run.
-`node ./raspberryToJSX.js path/to/input/file.raspberry.json path/to/output.jsx`
+```bash
+node ./raspberryToJSX.js path/to/input/file.raspberry.json path/to/output.jsx
+```
 
 Your file will be created, or overwritten if it already exists.
 
