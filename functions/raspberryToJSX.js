@@ -5,6 +5,12 @@
 const hrStart = process.hrtime()
 const fs = require('fs')
 
+//Input and output paths
+const path = {
+    input: process.argv[2],
+    output: process.argv[3]
+}
+
 /**
  * Detect an arrow function from a string
  *
@@ -26,15 +32,26 @@ const classicFunctionRegex = /function/g
  * Create an import statement from an import object
  * @param {string} name
  * @param {string} from
+ * @returns {string}
  */
 const createImportStatement = (name, from) => `import ${name} from '${from}'; `
 
 
-const removeCurlyBraces = string => {
+/**
+ * Remove curly braces from a string
+ * @param {string} string
+ * @returns {string}
+ */
+const removeCurlyBraces = (string) => {
     const noLeft = string.replace('{', '')
     return noLeft.replace('}', '')
 }
 
+/**
+ * Create a single prop from the prop object
+ * @param {object} props
+ * @returns {string}
+ */
 const createPropString = props => {
     return Object.keys(props).map(propKey => {
         const propValue = props[propKey]
@@ -47,6 +64,11 @@ const createPropString = props => {
     })?.join(' ') || ''
 }
 
+/**
+ * Create an element from the raspberry tree
+ * @param element
+ * @returns {{import: (*[]|[string]), markup: string}}
+ */
 const createElement = (element) => {
     // All imports for this component
     const imports = [createImportStatement(element.import.name, element.import.from)]
@@ -66,51 +88,59 @@ const createElement = (element) => {
     }
 }
 
+/**
+ * Main Function
+ */
+const main = () => {
 
-const path = {
-    input: process.argv[2],
-    output: process.argv[3]
+    // Read the file to a string
+    const rFile = JSON.parse(String(fs.readFileSync(path.input)))
+
+    // Create empty string for JSX
+    const jsxFile = {
+        imports: [],
+        body: ''
+    }
+
+    // Create body imports
+    rFile.bodyImports.forEach(bodyImport => {
+        jsxFile.imports.push(createImportStatement(bodyImport.name, bodyImport.from))
+    })
+
+    // Name of component
+    jsxFile.body += 'export const Test = () => {'
+
+    // Add body (logic and expressions)
+    jsxFile.body += rFile.body;
+
+    // Start of JSX return
+    jsxFile.body += 'return('
+
+    const rootElement = createElement(rFile.markup)
+    jsxFile.body += rootElement.markup
+    jsxFile.imports = [...jsxFile.imports, ...rootElement.import]
+
+    // End of JSX return
+    jsxFile.body += ')}'
+
+    // Assemble final string to write out
+    const finalJsxImports = Array.from(
+        // Creating a set will remove duplicates
+        new Set(
+            // Totally flatten nested arrays
+            jsxFile.imports.flat(Infinity)
+        )
+    ).join('') // Create one long string
+
+    // Join import string and body contents
+    const finalJsxString = finalJsxImports + jsxFile.body
+
+    // Write JSX File
+    fs.writeFileSync(path.output, finalJsxString)
+
 }
 
-// Read the file to a string
-const rFile = JSON.parse(String(fs.readFileSync(path.input)))
-
-// Create empty string for JSX
-const jsxFile = {
-    imports: [],
-    body: ''
-}
-
-// Create body imports
-rFile.bodyImports.forEach(bodyImport => {
-    jsxFile.imports.push(createImportStatement(bodyImport.name, bodyImport.from))
-})
-
-// Name of component
-jsxFile.body += 'export const Test = () => {'
-
-// Add body (logic and expressions)
-jsxFile.body += rFile.body;
-
-// Start of JSX return
-jsxFile.body += 'return('
-
-const rootElement = createElement(rFile.markup)
-jsxFile.body += rootElement.markup
-jsxFile.imports.push(...rootElement.import)
-
-// End of JSX return
-jsxFile.body += ')}'
-
-// Assemble final string to write out
-// No duplicate imports
-const finalJsxImports = Array.from(new Set(jsxFile.imports.flat(Infinity))).join('')
-
-const finalJsxString = finalJsxImports + jsxFile.body
-
-fs.writeFileSync(path.output, finalJsxString)
-
+main()
 const hrEnd = process.hrtime(hrStart)
-
 console.log(`Wrote ${path.output} in ${hrEnd[1] / 10_000_000}ms ✨`)
 

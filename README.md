@@ -7,7 +7,7 @@ Raspberry is a format for expressing JSX files as plain JSON. This makes it easi
 
 ## Why?
 The point of Raspberry to use some other system (GUI or command line) to generate actual React / RN code. 
-This is useful for creating 'App Builder' type systems, or programmatically generating whitelabel versions of an app. 
+This is useful for creating 'App Builder' type systems, managing your app from a CMS or programmatically generating whitelabel versions of an app. 
 
 Raspberry differs from other JSON/XML formats as it is designed specifically for JSX. This includes state logic, hooks and conditional rendering.
 
