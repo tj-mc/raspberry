@@ -112,7 +112,7 @@ export const Example = () => {
 ## Converting
 It's up to you to generate the Raspberry file. To convert it to JSX, simply run.
 ```bash
-node ./raspberryToJSX.js path/to/input/file.raspberry.json path/to/output.jsx
+node ./raspberry-core.js path/to/input/file.raspberry.json path/to/output.jsx
 ```
 Your file will be created, or overwritten if it already exists.
 

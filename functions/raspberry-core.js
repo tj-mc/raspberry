@@ -1,15 +1,5 @@
 #!/usr/bin/env node
 // Usage
-// node raspberryToJSX path/to/input.raspberry.json path/to/output.jsx
-
-const hrStart = process.hrtime()
-const fs = require('fs')
-
-//Input and output paths
-const path = {
-    input: process.argv[2],
-    output: process.argv[3]
-}
 
 /**
  * Detect an arrow function from a string
@@ -125,10 +115,9 @@ const createElement = (element) => {
 /**
  * Main Function
  */
-const main = () => {
+const main = (rFileJSON) => {
 
-    // Read the file to a string
-    const rFile = JSON.parse(String(fs.readFileSync(path.input)))
+    const rFile = rFileJSON
 
     // Create empty string for JSX
     const jsxFile = {
@@ -167,14 +156,8 @@ const main = () => {
     ).join('') // Create one long string
 
     // Join import string and body contents
-    const finalJsxString = finalJsxImports + jsxFile.body
-
-    // Write JSX File
-    fs.writeFileSync(path.output, finalJsxString)
-
+    return finalJsxImports + jsxFile.body
 }
 
-main()
-const hrEnd = process.hrtime(hrStart)
-console.log(`Wrote ${path.output} in ${hrEnd[1] / 10_000_000}ms ✨`)
+module.exports = main
 
