@@ -90,7 +90,7 @@ import {View} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 import {Text} from 'react-native';
 
-export const Test = () => {
+export const Example = () => {
     const x = true;
     const [textState, setTextState] = useState('Welcome to React Native');
     return (
@@ -110,15 +110,47 @@ export const Test = () => {
 ```
 
 ## Converting
-It's up to you to generating the raspberry file. To convert it to JSX, simply run.
+It's up to you to generate the Raspberry file. To convert it to JSX, simply run.
 ```bash
 node ./raspberryToJSX.js path/to/input/file.raspberry.json path/to/output.jsx
 ```
-
 Your file will be created, or overwritten if it already exists.
 
-## Performance
-`1000 lines = 86550 chars = 1.0780297ms = 0.00001245557ms /char`
+## Specification v1.0
+```ts
+type RsImport = {
+    name: string, // {Component} for named import, or Component
+    from: string  // my-package
+}
+
+type RsComponent = {
+    import: RsImport,
+    props: object, // Any normal props you would have in React / RN
+    children?: [RsComponent]
+    stringChild?: string, // Components like <Text/> take a string child.
+    logic?: {
+        renderIf: string // This string should return true of false when passed to eval()
+    }
+
+}
+
+type RsFile = {
+    meta: {
+        fileName: string,
+        export: {
+            name: string // Currently only supports named export
+        },
+    },
+    bodyImports: [RsImport], // Any imports required by the body string
+    body: string, // All code that is not part of the return()
+    markup: RsComponent 
+}
+```
+
+## Caveats
+- No support for class-based components
+- Currently only supports named export
 
 ## Future Improvements
-- Optimise imports
+- Optimise imports automatically
+- Support HOC like React.memo()
