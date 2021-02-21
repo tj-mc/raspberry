@@ -2,7 +2,7 @@
   <img width="300" src="logo.png" />
 </p>
 
-# Raspberry - JSX as JSON Format
+# Raspberry - JSX as JSON
 Raspberry is a format for expressing JSX files as plain JSON. This makes it easier to programmatically generate and modify React & React Native code.
 
 ## Why?
