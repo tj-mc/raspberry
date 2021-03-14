@@ -1,0 +1,22 @@
+{
+  "name": "raspberry-jsx",
+  "version": "1.0.0",
+  "description": "JSX as JSON",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tj-mc/raspberry.git"
+  },
+  "author": "Tom McIntosh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tj-mc/raspberry/issues"
+  },
+  "homepage": "https://github.com/tj-mc/raspberry#readme"
+}
