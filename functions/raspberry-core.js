@@ -115,7 +115,7 @@ const createElement = (element) => {
 /**
  * Main Function
  */
-export const main = (rFileJSON) => {
+const main = (rFileJSON) => {
 
     const rFile = rFileJSON
 

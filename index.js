@@ -1,2 +1,2 @@
-import {main} from './functions/raspberry-core'
+const main = require('/functions/raspberry-core')
 module.exports = main
