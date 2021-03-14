@@ -154,3 +154,4 @@ type RsFile = {
 ## Future Improvements
 - Optimise imports automatically
 - Support HOC like React.memo()
+- Better system for managing 'body' logic
